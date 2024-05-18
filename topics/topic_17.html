@@ -1,0 +1,33 @@
+<meta id="Chapter_Title" name="Chapter_Title" content="OPERATION"><meta id="Section_Title" name="Section_Title" content="Before Use"><meta id="Topic_Title" name="Topic_Title" content="Setting the Clock"><meta id="Topic_ID" name="Topic_ID" content="t_00079871_r1_20191101145819_1"><div class="topic-inner"><div class="bread-clumb"><a class="bread-clumb-item" href="#">Top</a> &gt; <a class="bread-clumb-item" href="#chapter_2">OPERATION</a> &gt; <a class="bread-clumb-item" href="#section_8">Before Use</a> &gt; Setting the Clock</div><div class="swiper-container swipe-area-height-max"><div class="swiper-wrapper"><div class="swiper-slide"></div><div class="swiper-slide"><div class="topic-contents main-page"><h2>Setting the Clock</h2><p class="p">When the oven is plugged in for the first time or when power resumes after a power interruption, the clock defaults to the 12-hour clock mode and 12H appears in the display. You can set the time of day or switch to the 24-hour clock mode.</p><ul class="procedure"><li><div class="step-contents"><p class="p">Press <span class="key">START/Select</span> to confirm the 12H clock display.</p><ul class="itemizedlist"><li><p class="p">To switch to the 24-hour clock mode, use <span class="key">More/Less</span>.</p></li></ul></div></li><li><div class="step-contents"><p class="p">Select a desired hour by using <span class="key">More/Less</span>, and press <span class="key">START/Select</span>.</p></div></li><li><div class="step-contents"><p class="p"> Select a desired minutes by using <span class="key">More/Less</span>, and press <span class="key">START/Select</span>.</p></div></li></ul><div class="note"><div class="note-title"><span><i class="note-icon"></i>Note</span></div><div class="note-body"><ul class="itemizedlist"><li><p class="p">To reset the clock mode, you must unplug and reconnect the power cord.</p></li><li><p class="p">If you do not want the time of day to appear in the display, press <span class="key">STOP/Cancel</span>, after plugging in the oven. </p></li><li><p class="p">When the oven is not in use, the display turns off to save energy, unless the time of day is set to show in the display. </p></li></ul></div></div></div></div><div class="swiper-slide"></div></div></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div><div class="pagination"><a href="#topic_16"><span class="page-marker"></span></a><a href="#topic_17"><span class="page-marker isCurrent"></span></a><a href="#topic_18"><span class="page-marker"></span></a></div><script>
+                        
+						$(function(){
+
+							swiper = null;
+							swiper = new Swiper('.swiper-container', {
+								initialSlide:1,
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								}
+							});
+							// スライドが切り替わったとき
+							swiper.on('slideChange', function () {
+								console.log('slide changed. ' + this.activeIndex);
+								if (this.activeIndex === 0) {
+									location.hash = $.topicPageLink.prevLink();
+								}
+								else if (this.activeIndex === 2) {
+
+									var linkResult = $.topicPageLink.nextLink();
+
+									if(linkResult != null)
+									{
+										location.hash = $.topicPageLink.nextLink();
+									}
+
+								}
+							});
+						});
+
+					
+                    </script>

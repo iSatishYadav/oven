@@ -1,0 +1,33 @@
+<meta id="Chapter_Title" name="Chapter_Title" content="SMART FUNCTIONS"><meta id="Section_Title" name="Section_Title" content="LG ThinQ Application"><meta id="Topic_Title" name="Topic_Title" content="Open Source Software Notice Information"><meta id="Topic_ID" name="Topic_ID" content="t_00101259_r1_20181228084733_1"><div class="topic-inner"><div class="bread-clumb"><a class="bread-clumb-item" href="#">Top</a> &gt; <a class="bread-clumb-item" href="#chapter_3">SMART FUNCTIONS</a> &gt; <a class="bread-clumb-item" href="#section_14">LG ThinQ Application</a> &gt; Open Source Software Notice Information</div><div class="swiper-container swipe-area-height-max"><div class="swiper-wrapper"><div class="swiper-slide"></div><div class="swiper-slide"><div class="topic-contents main-page"><h2>Open Source Software Notice Information</h2><p class="p">To obtain the  source code that is contained in this product, under GPL, LGPL, MPL, and other open source licenses that have the  obligation to disclose source code, and to  access all referred license terms, copyright notices and other relevant  documents, please visit https://opensource.lge.com.</p><p class="p">LG Electronics will also provide open source code to you on CD-ROM for a charge covering the cost of performing such distribution (such as the cost of media, shipping, and handling) upon email request to opensource@lge.com.</p><p class="p">This offer is valid to anyone in receipt of this information for a period of three years after our last shipment of this product.</p></div></div><div class="swiper-slide"></div></div></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div><div class="pagination"><a href="#topic_55"><span class="page-marker"></span></a><a href="#topic_56"><span class="page-marker"></span></a><a href="#topic_57"><span class="page-marker isCurrent"></span></a></div><script>
+                        
+						$(function(){
+
+							swiper = null;
+							swiper = new Swiper('.swiper-container', {
+								initialSlide:1,
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								}
+							});
+							// スライドが切り替わったとき
+							swiper.on('slideChange', function () {
+								console.log('slide changed. ' + this.activeIndex);
+								if (this.activeIndex === 0) {
+									location.hash = $.topicPageLink.prevLink();
+								}
+								else if (this.activeIndex === 2) {
+
+									var linkResult = $.topicPageLink.nextLink();
+
+									if(linkResult != null)
+									{
+										location.hash = $.topicPageLink.nextLink();
+									}
+
+								}
+							});
+						});
+
+					
+                    </script>
